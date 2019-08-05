@@ -3,7 +3,11 @@ node {
     stage("Echo Stage"){
       timestamps {
         cleanWs()
-        sh """echo 'Hello World. This is [Echo Stage] of pipeline job' """
+        if (isUnix()) {
+          sh """echo 'Hello World. This is [Echo Stage] of pipeline job' """
+        } else {
+          bat """echo 'Hello World. This is [Echo Stage] of pipeline job' """
+        }
       }
     }
   } catch(err) {
