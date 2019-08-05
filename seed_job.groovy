@@ -1,4 +1,5 @@
 pipelineJob('ArghyaTestPipelineJob') {
+description('This pipeline job is for testing')
     definition {
         cps {
 			      sandbox()
