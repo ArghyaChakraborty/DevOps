@@ -10,6 +10,12 @@ node {
         }
       }
     }
+    stage("Checkout Stage"){
+      timestamps {
+        cleanWs()
+        git credentialsId: 'arghyaGithubId', url: 'https://github.com/ArghyaChakraborty/simple-java-maven-app.git'
+      }
+    }
   } catch(err) {
     println err
   }
