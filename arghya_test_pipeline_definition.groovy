@@ -1,3 +1,6 @@
+// This file is written by -> creating a pipeline job manually -> populating the pipeline script block with sample pipeline script -> 
+// improvising it -> copying the content here ...
+
 node {
   try {
     stage("Echo Stage"){
