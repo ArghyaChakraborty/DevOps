@@ -16,7 +16,7 @@ node {
     stage("Checkout Stage"){
       timestamps {
         cleanWs()
-        git credentialsId: 'arghyaGithubId', url: 'https://github.com/ArghyaChakraborty/simple-java-maven-app.git'
+        git credentialsId: 'arghyaGithubId', url: 'https://github.com/ArghyaChakraborty/demo-java.git'
       }
     }
    stage('Build Stage') {
